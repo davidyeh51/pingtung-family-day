@@ -65,6 +65,16 @@
   .check input{margin-top:5px;accent-color:var(--teal);width:16px;height:16px}
   .check input:checked + span{color:var(--muted);text-decoration:line-through}
 
+  .alert{display:block;margin-top:16px;background:#fff4e0;border:1px solid #f0d49a;color:#7a4d00;border-radius:12px;padding:10px 14px;font-size:15px;text-decoration:none;font-weight:600}
+  .ty{background:var(--card);border:2px solid #f0d49a;border-radius:16px;padding:14px 16px}
+  .ty p{margin:4px 0}
+  .lv{display:grid;gap:8px;margin:12px 0}
+  .lv div{border-radius:12px;padding:10px 12px;font-size:15px}
+  .lv .g{background:var(--teal-soft)} .lv .y{background:var(--amber-soft)} .lv .r{background:var(--coral-soft)}
+  .lv b{display:block}
+  .mini{width:100%;border-collapse:collapse;font-size:15px;margin-top:6px}
+  .mini td{padding:7px 4px;border-top:1px solid var(--line);vertical-align:top}
+  .mini td:first-child{font-weight:700;color:var(--teal);white-space:nowrap;width:56px;font-variant-numeric:tabular-nums}
   footer{margin-top:40px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
 </style>
 </head>
@@ -75,6 +85,7 @@
   <span class="date">2026 / 10 / 23（五）</span>
   <h1>屏東一日遊：<br>不趕路、好拍照、讓寶貝跑個夠</h1>
   <p class="lead">只走屏東市區，每段車程 10 分鐘內。午睡排在車上，16:20 出發回家，17:10 前到家。</p>
+  <a class="alert" href="#typhoon">🌀 薔琵颱風：高屏 10/23 停班停課。早上 8 點看天氣決定走哪個版本 ↓</a>
   <ul class="pills">
     <li>🚗 單程 <b>約 45 分</b></li>
     <li>📍 只停 <b>4 站</b></li>
@@ -83,8 +94,35 @@
   </ul>
 </header>
 
+<section id="typhoon">
+  <h2>颱風天：早上 8 點三選一</h2>
+  <div class="ty">
+    <p>中颱<b>薔琵</b>已發陸上警報，高雄、屏東 10/23 停班停課，屏東縣災害應變中心一級開設。高屏平地預估雨量 80 毫米以下，比北部少，但仍有強陣風。</p>
+    <div class="lv">
+      <div class="g"><b>🟢 沒下雨或只有毛毛雨 → 照原行程</b>但戶外段縮短，隨時準備改室內。</div>
+      <div class="y"><b>🟡 有陣雨、風不大 → 走下面的「室內版」</b>只去有屋頂的地方，提早 1 小時回家。</div>
+      <div class="r"><b>🔴 有豪雨特報、強風，或高屏大橋風很大 → 不出門</b>在家休息，行程改到連假後面幾天。</div>
+    </div>
+    <p class="note">出發前先打電話或看粉專確認有開：總圖（停班日可能休館）、屏東太平洋百貨、午餐店家、黎記（08-7656204）。</p>
+  </div>
+
+  <h2>室內版行程（下雨用）</h2>
+  <div class="box">
+    <table class="mini">
+      <tr><td>09:30</td><td>從家出發。風大時上橋放慢、別跟大車並行</td></tr>
+      <tr><td>10:15</td><td><b>總圖館內兒童區</b>（有開才去，不走戶外樹林）；沒開就直接去百貨</td></tr>
+      <tr><td>11:30</td><td><b>午餐</b>：勝利星村有開的店，車停最近處，撐傘短程步行；不然改百貨美食街</td></tr>
+      <tr><td>12:45</td><td><b>屏東太平洋百貨</b>：吹冷氣、逛逛，有哺乳室、廁所方便</td></tr>
+      <tr><td>13:30</td><td>上車午睡，開到黎記附近停好等她醒</td></tr>
+      <tr><td>14:30</td><td><b>黎記冰糖醬鴨</b>外帶（店門口臨停）</td></tr>
+      <tr><td>15:00</td><td>出發回家，<b>16:00 前到家</b></td></tr>
+    </table>
+    <p class="note">室內版拿掉勝利星村散步和職人町（都在戶外）。長安製麵如果剛好順路有開再買。</p>
+  </div>
+</section>
+
 <section>
-  <h2>為什麼這樣排</h2>
+  <h2>晴天版：為什麼這樣排</h2>
   <div class="why">
     <div><span class="e">🌿</span><b>輕鬆不趕</b>4 站，每站停 1 小時以上；回程留 50 分鐘緩衝，避開下班車潮。</div>
     <div><span class="e">📸</span><b>好拍照</b>早上森林圖書館光線最好，下午職人町塗鴉牆、勝利星村老屋。</div>
@@ -93,7 +131,7 @@
 </section>
 
 <section>
-  <h2>行程時間表</h2>
+  <h2>晴天版時間表</h2>
   <ol class="tl">
 
     <li class="stop drive"><div class="t">09:00</div>
@@ -180,6 +218,8 @@
     <li><label><input type="checkbox"><span>薄外套（館內冷氣強）</span></label></li>
     <li><label><input type="checkbox"><span>午睡安撫物／小被子</span></label></li>
     <li><label><input type="checkbox"><span>伴手禮保冷袋</span></label></li>
+    <li><label><input type="checkbox"><span>推車雨罩、大傘、雨衣</span></label></li>
+    <li><label><input type="checkbox"><span>備用衣服多一套（淋濕用）</span></label></li>
   </ul>
 </section>
 
